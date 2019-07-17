@@ -16,8 +16,9 @@ class CharacterListView extends React.Component {
 
   render() {
     if (this.props.fetching) {
-      // return something here to indicate that you are fetching data
+      return(
       <h1>Fueling the X-Wings...Please Wait.</h1>
+      )
     }
     return (
       <div className="CharactersList_wrapper">
@@ -41,6 +42,6 @@ export default connect(
   mapStateToProps /* mapStateToProps replaces null here */,
   {
     /* action creators go here */
-    {pullChar}
+    pullChar
   }
 )(CharacterListView);
